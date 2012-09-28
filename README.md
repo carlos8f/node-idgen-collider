@@ -1,9 +1,38 @@
 idgen-collider
 ==============
 
-determine likelyhood of id collisions
+brute force id collider
 
-[![build status](https://secure.travis-ci.org/carlos8f/node-idgen-collider.png)](http://travis-ci.org/carlos8f/node-idgen-collider)
+install
+-------
+
+(requires redis server running on localhost)
+
+```bash
+$ npm install -g idgen-collider
+$ idgen-collider
+now colliding with 8 threads...
+keyspace: 309691
+keyspace: 626637
+keyspace: 945132
+...
+```
+
+usage
+-----
+
+```
+  Usage: idgen-collider [options]
+
+  Options:
+
+    -h, --help             output usage information
+    -V, --version          output the version number
+    -t, --threads <count>  number of threads to use (default: CPU count)
+    -s, --set <chars>      set of characters to use in hashes (default: a-zA-Z0-9)
+    -l, --length <length>  character length of hashes (default: 8)
+    --reset                reset the keyspace before starting
+```
 
 - - -
 
